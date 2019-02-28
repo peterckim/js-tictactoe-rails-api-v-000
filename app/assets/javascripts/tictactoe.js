@@ -2,7 +2,7 @@ $(document).ready(function (){
   attachListeners()
 })
 
- var winningComb = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+ var winningCombo = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 var turn = 0;
 var squares = $("td")
 var currentGame = 0
@@ -22,7 +22,7 @@ var currentGame = 0
     board.push(squares[i].textContent)
   }
 
-   winningComb.some(function(el){
+   winningCombo.some(function(el){
     if (board[el[0]]!==""  && board[el[0]] == board[el[1]] && board[el[1]] == board[el[2]]){
       setMessage(`Player ${board[el[0]]} Won!`)
       isWinner = true
